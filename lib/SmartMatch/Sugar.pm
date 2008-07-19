@@ -9,22 +9,24 @@ use Scalar::Util qw(blessed looks_like_number);
 use Carp qw(croak);
 use Class::Inspector ();
 
-our $VERSION = "0.02";
+our $VERSION = "0.03";
 
-use base qw(Exporter);
-our @EXPORT = our @EXPORT_OK = qw(
-	any none
+use Sub::Exporter -setup => {
+	exports => [qw(
+		any none
 
-	object class inv_isa inv_can inv_does
+		object class inv_isa inv_can inv_does
 
-	overloaded stringifies
+		overloaded stringifies
 
-	array array_length_is non_empty_array even_sized_array
+		array array_length_is non_empty_array even_sized_array
 
-	hash hash_size_is non_empty_hash
+		hash hash_size_is non_empty_hash
 
-	non_ref string_length_is non_empty_string
-);
+		non_ref string_length_is non_empty_string
+	)],
+	groups => { default => [ -all ] },
+};
 
 use 5.010;
 
@@ -252,7 +254,7 @@ Returns true if L<Class::Inspector> thinks the value is a loaded class.
 Returns true if C<< $object->isa($class) >>. Also works on classes.
 
 The reason this check is not called just C<isa> is because if you import that
-into an OO class then your object's C<isa> method is no bogus.
+into an OO class then your object's C<isa> method is now bogus.
 
 C<inv> stands for invocant, it's the least sucky name I could muster.
 
