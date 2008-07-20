@@ -9,7 +9,7 @@ use Scalar::Util qw(blessed looks_like_number);
 use Carp qw(croak);
 use Class::Inspector ();
 
-our $VERSION = "0.03";
+our $VERSION = "0.04";
 
 use Sub::Exporter -setup => {
 	exports => [qw(
@@ -206,7 +206,7 @@ SmartMatch::Sugar - Smart match friendly tests.
 		@$data;
 	}
 
-	if ( $object ~~ isa("Class" ) {
+	if ( $object ~~ inv_isa("Class") {
 
 	}	
 

@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:                SmartMatch-Sugar
-version:             0.03
+version:             0.04
 abstract:            ~
 license:             ~
 author:              ~
@@ -9,7 +9,7 @@ distribution_type:   module
 requires:     
     Class::Inspector:              0
     Scalar::Util:                  0
-    Sub::SmartMatch:               0
+    Sub::Exporter:                 0
     Test::use::ok:                 0
 meta-spec:
     url:     http://module-build.sourceforge.net/META-spec-v1.3.html
