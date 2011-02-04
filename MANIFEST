@@ -1,8 +1,13 @@
 Changes
-lib/SmartMatch/Sugar.pm
+LICENSE
+MANIFEST
+META.json
+META.yml
 Makefile.PL
-MANIFEST			This list of files
-MANIFEST.SKIP
+README
+dist.ini
+lib/SmartMatch/Sugar.pm
 t/basic.t
-META.yml                                 Module meta-data (added by MakeMaker)
-SIGNATURE                                Public-key signature (added by MakeMaker)
+t/release-kwalitee.t
+t/release-pod-coverage.t
+t/release-pod-syntax.t
